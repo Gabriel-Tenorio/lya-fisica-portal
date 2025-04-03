@@ -47,37 +47,35 @@
       padding: 0.8rem;
       border-radius: 8px;
     }
-    #chatbox {
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      width: 300px;
-      background: #1e293b;
-      border: 1px solid #4b5563;
+    #chat {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #1f2937;
+      padding: 1rem;
       border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      font-size: 0.9rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-    #chatbox-header {
-      background: #4c1d95;
-      color: white;
-      padding: 0.75rem;
-      font-weight: bold;
-    }
-    #chatbox-body {
+    #chat-log {
       max-height: 200px;
       overflow-y: auto;
-      padding: 1rem;
-      background-color: #111827;
-    }
-    #chatbox-input {
-      border: none;
-      width: 100%;
+      margin-bottom: 1rem;
       padding: 0.5rem;
-      outline: none;
-      background: #1f2937;
-      color: #f9fafb;
+      background-color: #111827;
+      border-radius: 8px;
+    }
+    #chatbox {
+      width: 70%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 8px;
+    }
+    #send-btn {
+      padding: 0.5rem 1rem;
+      background-color: #4c1d95;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
   </style>
 </head>
@@ -120,12 +118,11 @@
     </section>
   </div>
 
-  <div id="chatbox">
-    <div id="chatbox-header">Lya Assistente</div>
-    <div id="chatbox-body">
-      <p><strong>Lya:</strong> Estou aqui se precisar de algo!</p>
-    </div>
-    <input id="chatbox-input" placeholder="Digite sua mensagem...">
+  <div id="chat">
+    <h2 style="text-align: center; color: #c084fc;">🤖 Converse com a Lya</h2>
+    <div id="chat-log"></div>
+    <input type="text" id="chatbox" placeholder="Escreva aqui...">
+    <button id="send-btn">Enviar</button>
   </div>
 
   <script>
@@ -133,5 +130,6 @@
     const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById('data-atual').textContent = hoje.toLocaleDateString('pt-BR', opcoes);
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
