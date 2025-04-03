@@ -4,7 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Lya Física 1.0</title>
-  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #111827;
+      color: #f3f4f6;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #1f2937;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      margin-top: 2rem;
+    }
+    header, section {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-size: 2rem;
+      color: #a78bfa;
+    }
+    h2 {
+      color: #c084fc;
+      margin-bottom: 1rem;
+    }
+    p, ul {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background-color: #374151;
+      margin-bottom: 0.5rem;
+      padding: 0.8rem;
+      border-radius: 8px;
+    }
+    #chatbox {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      width: 300px;
+      background: #1e293b;
+      border: 1px solid #4b5563;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      font-size: 0.9rem;
+    }
+    #chatbox-header {
+      background: #4c1d95;
+      color: white;
+      padding: 0.75rem;
+      font-weight: bold;
+    }
+    #chatbox-body {
+      max-height: 200px;
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: #111827;
+    }
+    #chatbox-input {
+      border: none;
+      width: 100%;
+      padding: 0.5rem;
+      outline: none;
+      background: #1f2937;
+      color: #f9fafb;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -25,7 +100,9 @@
 
     <section>
       <h2>📌 Lembretes e Agenda</h2>
-      <p>🗓️ Reunião na Portelinha — <strong>Sábado, 13/04, às 15h</strong></p>
+      <ul>
+        <li>🗓️ Reunião na Portelinha — <strong>Sábado, 13/04, às 15h</strong></li>
+      </ul>
     </section>
 
     <section>
@@ -41,6 +118,14 @@
       <h2>💬 Mensagem da Lya</h2>
       <p>"Confiança, foco e equilíbrio. Estou com você em cada passo, Sr. Gabriel."</p>
     </section>
+  </div>
+
+  <div id="chatbox">
+    <div id="chatbox-header">Lya Assistente</div>
+    <div id="chatbox-body">
+      <p><strong>Lya:</strong> Estou aqui se precisar de algo!</p>
+    </div>
+    <input id="chatbox-input" placeholder="Digite sua mensagem...">
   </div>
 
   <script>
