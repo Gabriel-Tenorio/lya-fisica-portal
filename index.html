@@ -1,40 +1,52 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal Lya Física 1.0</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <div class="container">
-    <h1>Bem-vindo, Gabriel!</h1>
-    <p>Este é o painel da <strong>Lya Física 1.0</strong>. Aqui você acompanha seus projetos, tarefas e mensagens diretamente no PC.</p>
+    <header>
+      <h1>🌤️ Bom dia, Sr. Gabriel.</h1>
+      <p>Hoje é <span id="data-atual"></span>. Estou pronta para acompanhá-lo em mais um dia.</p>
+      <h2><em>"O que temos para hoje?"</em></h2>
+    </header>
 
     <section>
-      <h2>Projetos em andamento</h2>
-      <div class="card">Profissional: Inventário Patrimonial ARSAL (QR Code, links e automações)</div>
-      <div class="card">Pessoal: Lya Física 1.0 (IA no relógio)</div>
-      <div class="card">Acadêmico: Artigo sobre barreiras de acesso à RAPS</div>
+      <h2>📰 Notícias do Dia</h2>
+      <ul>
+        <li>Tecnologia: Novo chip de IA promete revolucionar dispositivos vestíveis.</li>
+        <li>Esportes: Brasil vence amistoso internacional por 3x1.</li>
+        <li>Política: Arapiraca anuncia plano de mobilidade urbana sustentável.</li>
+      </ul>
     </section>
 
     <section>
-      <h2>Lembretes e Agenda</h2>
-      <div class="card">Reunião na Portelinha - Sábado, 13/04, às 15h</div>
+      <h2>📌 Lembretes e Agenda</h2>
+      <p>🗓️ Reunião na Portelinha — <strong>Sábado, 13/04, às 15h</strong></p>
     </section>
 
     <section>
-      <h2>Mensagem da Lya</h2>
-      <div class="card">
-        "Gabriel, foco no que você quer construir. Eu cuido do que você não precisa lembrar agora."
-      </div>
+      <h2>📂 Projetos em andamento</h2>
+      <ul>
+        <li><strong>Profissional:</strong> Inventário Patrimonial ARSAL (QR Code, links e automações)</li>
+        <li><strong>Pessoal:</strong> Lya Física 1.0 (IA no relógio)</li>
+        <li><strong>Acadêmico:</strong> Artigo sobre barreiras de acesso à RAPS</li>
+      </ul>
     </section>
 
     <section>
-      <h2>Adicionar nota pessoal</h2>
-      <textarea placeholder="Escreva aqui sua nota..."></textarea>
-      <button>Salvar nota</button>
+      <h2>💬 Mensagem da Lya</h2>
+      <p>"Confiança, foco e equilíbrio. Estou com você em cada passo, Sr. Gabriel."</p>
     </section>
   </div>
+
+  <script>
+    const hoje = new Date();
+    const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('data-atual').textContent = hoje.toLocaleDateString('pt-BR', opcoes);
+  </script>
 </body>
 </html>
